@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "8f3d8a1c-b47a-4289-9b93-8cb42d17c910",
+		"name": "Taller Biblioteca API",
+		"description": "Colección de pruebas para el Taller de ASP.NET Core Web API de Gestión de Biblioteca (Libros y Categorías).",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. GET Todos los Libros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5293/api/libros",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5293",
+					"path": [
+						"api",
+						"libros"
+					]
+				},
+				"description": "Consulta y retorna la lista completa de libros almacenados en memoria."
+			},
+			"response": []
+		},
+		{
+			"name": "2. GET Libro por Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5293/api/libros/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5293",
+					"path": [
+						"api",
+						"libros",
+						"1"
+					]
+				},
+				"description": "Consulta un libro específico por su identificador único (ID = 1)."
+			},
+			"response": []
+		},
+		{
+			"name": "3. POST Registrar Nuevo Libro",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"titulo\": \"Crónica de una muerte anunciada\",\n    \"autor\": \"Gabriel García Márquez\",\n    \"disponible\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5293/api/libros",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5293",
+					"path": [
+						"api",
+						"libros"
+					]
+				},
+				"description": "Registra un nuevo libro en la lista en memoria mediante método POST."
+			},
+			"response": []
+		},
+		{
+			"name": "4. GET Todas las Categorías",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5293/api/categorias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5293",
+					"path": [
+						"api",
+						"categorias"
+					]
+				},
+				"description": "Consulta y retorna la lista completa de categorías almacenadas en memoria."
+			},
+			"response": []
+		}
+	]
+}
